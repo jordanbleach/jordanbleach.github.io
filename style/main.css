@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica;
+}
+
+header {
+  height: 73vh;
+  text-align: center;
+  padding-top: 27vh;
+  /* Location of the image */
+  background-image: url("../images/headerBG.jpg");
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+  /* Background image is fixed in the viewport so that it doesn't move when
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+  /* Set a background color that will be displayed
+     while the background image is loading */
+  background-color: #464646;
+}
+header h1, header h3, header nav a {
+  color: white;
+}
+header h1 {
+  text-decoration: underline;
+}
+header nav a {
+  background-color: #ba3b94;
+  border-radius: 10%;
+  text-decoration: none;
+  padding: 9px;
+}
+header nav a:hover {
+  padding: 10px;
+}
+
+main article {
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 15vh;
+  margin-top: 15vh;
+  text-align: center;
+}
+
+main article.about {
+  max-width: 40%;
+  overflow: auto;
+}
+main article.about img {
+  width: 175px;
+  height: 175px;
+  float: left;
+  margin: 1em 1em 1em 0;
+  border-radius: 50%
+}
+main article.about p {
+  margin-top: 55px;
+  text-align: justify;
+}
+
+main article.skills {
+  clear:both;
+  max-width: 60%;
+  max-height: 200px;
+}
+main article.skills section {
+  display: inline-block;
+  max-width: 33%;
+  vertical-align: top;
+  height: 200px;
+}
+
+main article.contact {
+  max-width: 40%;
+}
+main article.contact img {
+  padding: 5px;
+}
+main article.contact p {
+  text-align: center;
+}
+
+footer {
+  background-color: #26262e;
+  height: 50px;
+  text-align: center;
+  color: white;
+}
+
+#scrollToTopBtn {
+  background-color: black;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 48px;
+  width: 48px;
+}
