@@ -145,6 +145,7 @@ footer p {
     margin: 0 auto;
   }
   header {
+    background-size:contain;
     z-index: -10;
   }
 
