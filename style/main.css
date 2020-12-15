@@ -127,6 +127,7 @@ footer p {
 
 /* PHONE */
 @media screen and (max-width: 600px) {
+
   main article {
     position: relative;
     max-width: 100%;
@@ -138,4 +139,22 @@ footer p {
   main article.skills section {
     max-width: 80%;
   }
+  main article.about img {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+  header {
+    width: 100%;
+    height: 73vh;
+    text-align: center;
+    padding-top: 27vh;
+    background-image: url("../images/headerBG.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    background-color: #464646;
+  }
+
 }
