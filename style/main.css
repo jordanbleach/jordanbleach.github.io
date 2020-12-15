@@ -5,6 +5,7 @@ body {
 }
 
 header {
+  width: 100%;
   height: 73vh;
   text-align: center;
   padding-top: 27vh;
@@ -23,6 +24,7 @@ header {
   /* Set a background color that will be displayed
      while the background image is loading */
   background-color: #464646;
+  overflow: auto;
 }
 header h1, header h3, header nav a {
   color: white;
@@ -49,12 +51,12 @@ main article {
 }
 
 main article.about {
-  max-width: 40%;
-  overflow: auto;
+  max-width: 40vw;
+  overflow: visible;
 }
 main article.about img {
-  width: 175px;
-  height: 175px;
+  max-width: 175px;
+  max-height: 175px;
   float: left;
   margin: 1em 1em 1em 0;
   border-radius: 50%
