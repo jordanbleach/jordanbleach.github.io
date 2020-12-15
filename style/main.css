@@ -24,7 +24,7 @@ header {
   /* Set a background color that will be displayed
      while the background image is loading */
   background-color: #464646;
-  overflow: auto;
+  overflow: hidden;
 }
 header h1, header h3, header nav a {
   color: white;
@@ -42,6 +42,11 @@ header nav a:hover {
   padding: 10px;
 }
 
+main {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
 main article {
   position: relative;
   margin: 0 auto;
@@ -69,17 +74,17 @@ main article.about p {
 main article.skills {
   clear:both;
   max-width: 60%;
-  max-height: 200px;
+  max-height: 60%;
 }
 main article.skills section {
   display: inline-block;
   max-width: 33%;
   vertical-align: top;
-  height: 200px;
 }
 
 main article.contact {
   max-width: 40%;
+  max-height: 60%;
 }
 main article.contact img {
   padding: 5px;
@@ -90,6 +95,7 @@ main article.contact p {
 
 footer {
   background-color: #26262e;
+  width: 100%;
   height: 50px;
   text-align: center;
   color: white;
