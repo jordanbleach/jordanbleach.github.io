@@ -1,11 +1,21 @@
-let scrollToTopBtn = document.getElementById("scrollToTopBtn")
-let rootElement = document.documentElement
+let slideIndex = 1;
+showSlides(slideIndex);
 
-function scrollToTop() {
-  rootElement.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  })
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-scrollToTopBtn.addEventListener("click", scrollToTop())
+function showSlides(n) {
+  let skills = document.getElementsByClassName("mySkills");
+  if (n > skills.length) {
+    slideIndex = 1
+  }
+  if (n < 1) {
+    slideIndex = skills.length
+  }
+  for (let i = 0; i < skills.length; i++) {
+      skills[i].style.display = "none";
+  }
+  skills[slideIndex-1].style.display = "inline-block";
+}

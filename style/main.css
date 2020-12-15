@@ -1,7 +1,7 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: Helvetica;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
 }
 
 header {
@@ -9,22 +9,12 @@ header {
   height: 73vh;
   text-align: center;
   padding-top: 27vh;
-  /* Location of the image */
   background-image: url("../images/headerBG.jpg");
-  /* Background image is centered vertically and horizontally at all times */
   background-position: center center;
-  /* Background image doesn't tile */
   background-repeat: no-repeat;
-  /* Background image is fixed in the viewport so that it doesn't move when
-     the content's height is greater than the image's height */
   background-attachment: fixed;
-  /* This is what makes the background image rescale based
-     on the container's size */
   background-size: cover;
-  /* Set a background color that will be displayed
-     while the background image is loading */
   background-color: #464646;
-  overflow: hidden;
 }
 header h1, header h3, header nav a {
   color: white;
@@ -43,12 +33,12 @@ header nav a:hover {
 }
 
 main {
-  margin: 0;
-  padding: 0;
   width: 100%;
 }
 main article {
   position: relative;
+  max-width: 50vw;
+  height: 30vh;
   margin: 0 auto;
   margin-bottom: 15vh;
   margin-top: 15vh;
@@ -56,35 +46,60 @@ main article {
 }
 
 main article.about {
-  max-width: 40vw;
   overflow: visible;
 }
 main article.about img {
-  max-width: 175px;
-  max-height: 175px;
+  max-width: 45%;
+  max-height: 45%;
   float: left;
   margin: 1em 1em 1em 0;
   border-radius: 50%
 }
 main article.about p {
-  margin-top: 55px;
+  margin-top: 5%;
   text-align: justify;
 }
 
 main article.skills {
   clear:both;
-  max-width: 60%;
-  max-height: 60%;
+  max-width: 100%;
+  display: block;
+  position: relative;
 }
 main article.skills section {
   display: inline-block;
-  max-width: 33%;
+  max-width: 15%;
+  height: 100%;
   vertical-align: top;
 }
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev {
+  left: 0;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
 
-main article.contact {
+
+/* main article.contact {
   max-width: 40%;
-  max-height: 60%;
+  max-height: 500px;
 }
 main article.contact img {
   padding: 5px;
@@ -92,6 +107,10 @@ main article.contact img {
 main article.contact p {
   text-align: center;
 }
+main article.contact label{
+  width: 100%;
+  height: 33%;
+} */
 
 footer {
   background-color: #26262e;
@@ -101,7 +120,7 @@ footer {
   color: white;
 }
 
-#scrollToTopBtn {
+/* #scrollToTopBtn {
   background-color: black;
   border: none;
   border-radius: 50%;
@@ -110,4 +129,13 @@ footer {
   font-size: 16px;
   line-height: 48px;
   width: 48px;
+} */
+
+/* PHONE */
+@media screen and (max-width: 600px) {
+  main article.skills section {
+    display: block;
+    margin: 0 auto;
+    overflow: scroll;
+  }
 }
