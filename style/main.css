@@ -33,6 +33,8 @@ header nav a:hover {
 }
 
 main {
+  display: block;
+  position: relative;
   width: 100%;
 }
 main article {
@@ -45,9 +47,6 @@ main article {
   text-align: center;
 }
 
-main article.about {
-  overflow: visible;
-}
 main article.about img {
   max-width: 45%;
   max-height: 45%;
@@ -96,31 +95,26 @@ main article.skills section {
   background-color: rgba(0,0,0,0.8);
 }
 
-
-/* main article.contact {
-  max-width: 40%;
-  max-height: 500px;
+main article.contact{
+  height: auto;
 }
-main article.contact img {
-  padding: 5px;
-}
-main article.contact p {
-  text-align: center;
-}
-main article.contact label{
-  width: 100%;
-  height: 33%;
-} */
 
 footer {
+  position: relative;
   background-color: #26262e;
   width: 100%;
-  height: 50px;
   text-align: center;
   color: white;
 }
+footer p {
+  margin: 0;
+}
 
-/* #scrollToTopBtn {
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 25px;
   background-color: black;
   border: none;
   border-radius: 50%;
@@ -128,14 +122,20 @@ footer {
   cursor: pointer;
   font-size: 16px;
   line-height: 48px;
-  width: 48px;
-} */
+  width: 50px;
+}
 
 /* PHONE */
 @media screen and (max-width: 600px) {
-  main article.skills section {
-    display: block;
+  main article {
+    position: relative;
+    max-width: 100%;
+    height: 30vh;
     margin: 0 auto;
-    overflow: scroll;
+    margin-bottom: 30vh;
+    margin-top: 30vh;
+  }
+  main article.skills section {
+    max-width: 80%;
   }
 }

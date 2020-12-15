@@ -1,7 +1,7 @@
+// SKILLS SLIDESHOW LOGIC
 let slideIndex = 1;
 showSlides(slideIndex);
 
-// Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
@@ -19,3 +19,26 @@ function showSlides(n) {
   }
   skills[slideIndex-1].style.display = "inline-block";
 }
+
+// SCROLL TO TOP BUTTON LOGIC
+let rootElement = document.documentElement;
+let scrollBtn = document.getElementById("scrollToTopBtn");
+
+function handleScroll() {
+  let scrollTotal = rootElement.scrollHeight - rootElement.clientHeight
+  if ((rootElement.scrollTop / scrollTotal ) > 0.50) {
+    scrollBtn.style.display = "block"
+  } else {
+    scrollBtn.style.display = "none"
+  }
+}
+
+function scrollToTop() {
+  rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  })
+}
+
+scrollBtn.addEventListener("click", scrollToTop)
+document.addEventListener("scroll", handleScroll);
