@@ -25,11 +25,11 @@ let rootElement = document.documentElement;
 let scrollBtn = document.getElementById("scrollToTopBtn");
 
 function handleScroll() {
-  let scrollTotal = rootElement.scrollHeight - rootElement.clientHeight
+  let scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
   if ((rootElement.scrollTop / scrollTotal ) > 0.50) {
-    scrollBtn.style.display = "block"
+    scrollBtn.style.display = "block";
   } else {
-    scrollBtn.style.display = "none"
+    scrollBtn.style.display = "none";
   }
 }
 
@@ -40,5 +40,5 @@ function scrollToTop() {
   })
 }
 
-scrollBtn.addEventListener("click", scrollToTop)
+scrollBtn.addEventListener("click", scrollToTop);
 document.addEventListener("scroll", handleScroll);
