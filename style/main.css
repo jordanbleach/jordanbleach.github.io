@@ -40,13 +40,15 @@ main {
 main article {
   position: relative;
   max-width: 50vw;
-  height: 30vh;
   margin: 0 auto;
   margin-bottom: 15vh;
   margin-top: 15vh;
   text-align: center;
 }
 
+main article.about {
+  height: auto;
+}
 main article.about img {
   max-width: 45%;
   max-height: 45%;
@@ -62,6 +64,7 @@ main article.about p {
 main article.skills {
   clear:both;
   max-width: 100%;
+  height: auto;
   display: block;
   position: relative;
 }
@@ -126,7 +129,7 @@ footer p {
 }
 
 /* PHONE */
-@media screen and (max-width: 600px)  {
+@media screen and (max-width: 700px)  {
   main article {
     position: relative;
     max-width: 95%;
@@ -144,12 +147,6 @@ footer p {
     margin: 0 auto;
   }
   header {
-    z-index: 10;
-    left: 0;
-    top: 0;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background-attachment: scroll;
   }
 }
