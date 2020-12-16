@@ -147,6 +147,7 @@ footer p {
     margin: 0 auto;
   }
   header {
+    background-image: url("../images/smallHeaderBG.jpg");
     background-attachment: scroll;
   }
 }
